@@ -2,7 +2,6 @@ class MakeDecision
 
   HEIGHT_DIFF_ERROR = -5
 
-
   def initialize(params)
     @fencer1 = initialize_fencer(params[:fencer1])
     @fencer2 = initialize_fencer(params[:fencer2])
@@ -27,9 +26,9 @@ class MakeDecision
 
   def initialize_fencer(fencer_options)
     {
-      age: fencer_options[:age],
-      intimidated: fencer_options[:age],
-      height: fencer_options[:height],
+      age: fencer_options[:age].to_i,
+      intimidated: fencer_options[:intimidated].to_i,
+      height: fencer_options[:height].to_i,
       grip: fencer_options[:grip]
     }
   end
@@ -38,17 +37,23 @@ class MakeDecision
     age1 = @fencer1[:age]
     age2 = @fencer2[:age]
 
-    if age1 > age2
-      return 0
-    else if age1 < age2
-      return 2
+    if @fencer1[:intimidated]
+      if age1 > age2
+        return 1
+      else
+        return 2
+      end
     else
-      return 1
+      if age1 < age2
+        return 1
+      else
+        return 0
+      end
     end
   end
 
   def obtain_distance
-    height_difference = @fencer1[[:height] - @fencer2[:height]
+    height_difference = @fencer1[:height] - @fencer2[:height]
     grip_distance = obtain_grip_distance
 
     if height_difference > HEIGHT_DIFF_ERROR
@@ -82,7 +87,7 @@ class MakeDecision
 
     if grip1 == grip2
       return 1
-    else if grip1 == "French"
+    elsif grip1 == "French"
       return 0
     else
       return 2
@@ -103,6 +108,5 @@ class MakeDecision
     return false if short_distance
     return true if experience == 0
     false
-    end
   end
 end

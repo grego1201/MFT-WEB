@@ -1,14 +1,23 @@
-<%= form_tag do %>
-  <%= label_tag(:tirador1, t('fencer', {number: 1})) %> <p/>
-  <%= text_field_tag(:title, "titulo") %> <p/>
+<%= form_tag do |form| %>
+  <%= label_tag(:fencer1, t('fencer', {number: 1})) %> <p/>
 
-  <%= radio_button_tag(:puno, "Frances") %> Francés<p/>
-  <%= radio_button_tag(:puno, "Anatomico") %> Anatómico<p/>
+  <%= radio_button_tag(:grip1, "Frances") %> Francés<p/>
+  <%= radio_button_tag(:grip1, "Anatomico") %> Anatómico<p/>
 
-  <%= check_box_tag(:puno, "Intimidad") %> Intimidado<p/>
+  <%= check_box_tag(:intimidated1, value = 1) %> Intimidado<p/>
 
-  <%= number_field_tag(:altura, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
-  <%= number_field_tag(:edad, options={min: 80, max: 250, step: 1}) %> Edad <p/>
+  <%= number_field_tag(:height1, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+  <%= number_field_tag(:age1, options={min: 4, max: 120, step: 1}) %> Edad <p/>
+
+  <%= label_tag(:fencer2, t('fencer', {number: 2})) %> <p/>
+
+  <%= radio_button_tag(:grip2, "Frances") %> Francés<p/>
+  <%= radio_button_tag(:grip2, "Anatomico") %> Anatómico<p/>
+
+  <%= check_box_tag(:intimidated2, value = 1) %> Intimidado<p/>
+
+  <%= number_field_tag(:height2, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+  <%= number_field_tag(:age2, options={min: 4, max: 120, step: 1}) %> Edad <p/>
 
   <%= submit_tag("enviar") %>
 <% end %>
