@@ -1,0 +1,3 @@
+es:
+  hello: "Hello world"
+  fencer: "Tirador %{number}"

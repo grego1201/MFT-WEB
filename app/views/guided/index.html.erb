@@ -1,0 +1,14 @@
+<%= form_tag do %>
+  <%= label_tag(:tirador1, t('fencer', {number: 1})) %> <p/>
+  <%= text_field_tag(:title, "titulo") %> <p/>
+
+  <%= radio_button_tag(:puno, "Frances") %> Francés<p/>
+  <%= radio_button_tag(:puno, "Anatomico") %> Anatómico<p/>
+
+  <%= check_box_tag(:puno, "Intimidad") %> Intimidado<p/>
+
+  <%= number_field_tag(:altura, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+  <%= number_field_tag(:edad, options={min: 80, max: 250, step: 1}) %> Edad <p/>
+
+  <%= submit_tag("enviar") %>
+<% end %>
