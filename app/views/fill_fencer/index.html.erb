@@ -1,2 +1,32 @@
-<h1>FillFencer#index</h1>
-<p>Find me in app/views/fill_fencer/index.html.erb</p>
+<%= form_tag do |form| %>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <%= label_tag(:fencer1, t('fencer', {number: 1})) %> <p/>
+
+      <%= radio_button_tag(:grip1, "Frances") %> Francés<p/>
+      <%= radio_button_tag(:grip1, "Anatomico") %> Anatómico<p/>
+
+      <%= check_box_tag(:intimidated1, value = 1) %> Intimidado<p/>
+
+      <%= number_field_tag(:height1, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+      <%= number_field_tag(:age1, options={min: 4, max: 120, step: 1}) %> Edad <p/>
+    </div>
+
+    <div class="col-xs-3">
+      <%= label_tag(:fencer2, t('fencer', {number: 2})) %> <p/>
+
+      <%= radio_button_tag(:grip2, "Frances") %> Francés<p/>
+      <%= radio_button_tag(:grip2, "Anatomico") %> Anatómico<p/>
+
+      <%= check_box_tag(:intimidated2, value = 1) %> Intimidado<p/>
+
+      <%= number_field_tag(:height2, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+      <%= number_field_tag(:age2, options={min: 4, max: 120, step: 1}) %> Edad <p/>
+
+    </div>
+  </div>
+  <div class="row">
+    <%= submit_tag("enviar") %>
+  </div>
+<% end %>
