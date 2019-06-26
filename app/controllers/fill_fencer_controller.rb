@@ -13,7 +13,7 @@ class FillFencerController < ApplicationController
     @blade = results[:blade]
     @second_intention = results[:second_intention]
 
-    render '/fill_fencers/results'
+    render '/fill_fencer/results'
   end
 
   private
