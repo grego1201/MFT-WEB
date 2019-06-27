@@ -1,6 +1,11 @@
-pagina de contacto
+pagina de contacto<br>
 
 
+<% if flash[:error] %>
+ No se ha podido crear 
+<% end %>
+
+<br>
 
 Sugerencias libres <%= @free_suggests %>
 <%= form_tag do |form| %>

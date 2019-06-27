@@ -2,6 +2,7 @@ class Suggestion < ApplicationRecord
 
   before_validation :free_suggests?, :on => :create
   validates :suggest, uniqueness: true
+  validates :suggest, :username, presence: true
 
   private
 

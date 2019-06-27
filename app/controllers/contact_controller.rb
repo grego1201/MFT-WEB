@@ -5,8 +5,14 @@ class ContactController < ApplicationController
   end
 
   def create_suggest
-    Suggestion.create(username: params["username"], suggest: params["suggest"])
-    redirect_to '/contact/index'
+    suggestion = Suggestion.new(username: params["username"], suggest: params["suggest"])
+    if suggestion.save
+      flash[:success] = "Se ha podido crear"
+      redirect_to '/show_suggests/index'
+    else
+      flash[:error] = "no se ha podido crear"
+      redirect_to '/contact/index'
+    end
   end
 
 end
