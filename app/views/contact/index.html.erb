@@ -1,1 +1,10 @@
 pagina de contacto
+
+
+
+<%= form_tag do |form| %>
+  <%= label_tag(:username_label, "nombre de usuario") %> <p/>
+  <%= text_field_tag(:username) %> <p/>
+  <%= text_area_tag(:suggest) %> <p/>
+  <%= submit_tag("enviar") %>
+<% end %>
