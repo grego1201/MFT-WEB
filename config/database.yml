@@ -20,4 +20,5 @@ test:
   <<: *default
 
 production:
+  username: user
   <<: *default

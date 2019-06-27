@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'contact/index'
   post 'contact/index', to: 'contact#create_suggest'
+  get 'show_suggests/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #
   root 'welcome#index'
