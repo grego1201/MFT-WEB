@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'fill_fencer/index'
   post 'fill_fencer/index', to: 'fill_fencer#obtain_decision'
   get 'welcome/index'
+  get 'contact/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #
   root 'welcome#index'
