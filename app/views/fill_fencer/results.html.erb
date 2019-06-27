@@ -1,20 +1,5 @@
-<%#- if @results[:short_distance]%>
-  <%#fdsafdsa%>
-<%#<%= @results[:short_distance] %>%>
-
-<%#<%= if @short_distance %>%>
-  <%#show short distance%>
-<%#<%= end %>%>
-
 <% if @short_distance == true %>
   This line will be displayed.
 <% end %>
 
-
-<% @results %>
-
-<% @short_distance %>
-<% @agressiveness %>
-<% @blade %>
-<% @second_intention %>
-
+<%= @results.inspect %>
