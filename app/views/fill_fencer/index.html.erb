@@ -1,27 +1,41 @@
+<h1> Rellene las características de cada tirador </h1>
+
 <%= form_tag do |form| %>
 
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-xs-5">
       <%= label_tag(:fencer1, t('fencer', {number: 1})) %> <p/>
 
+      <%= label_tag(:grip_label, "Seleccional el puño") %><br>
       <%= radio_button_tag(:grip1, "Frances") %> Francés<p/>
       <%= radio_button_tag(:grip1, "Anatomico") %> Anatómico<p/>
 
+
+      <%= label_tag(:intimidated, "Marque la siguiente opción si el tirador se encuentra intimidado") %><br>
       <%= check_box_tag(:intimidated1, value = 1) %> Intimidado<p/>
 
-      <%= number_field_tag(:height1, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
-      <%= number_field_tag(:age1, options={min: 4, max: 120, step: 1}) %> Edad <p/>
+
+      <%= label_tag(:height, "Altura (cm)") %><br>
+      <%= number_field_tag(:height1, options={min: 80, max: 250, step: 1}) %><p/>
+
+      <%= label_tag(:age, "Edad (años)") %><br>
+      <%= number_field_tag(:age1, options={min: 4, max: 120, step: 1}) %><p/>
     </div>
 
-    <div class="col-xs-3">
+    <div class="col-xs-5">
       <%= label_tag(:fencer2, t('fencer', {number: 2})) %> <p/>
 
+      <%= label_tag(:grip_label, "Seleccional el puño") %><br>
       <%= radio_button_tag(:grip2, "Frances") %> Francés<p/>
       <%= radio_button_tag(:grip2, "Anatomico") %> Anatómico<p/>
 
+      <%= label_tag(:intimidated, "Marque la siguiente opción si el tirador se encuentra intimidado") %><br>
       <%= check_box_tag(:intimidated2, value = 1) %> Intimidado<p/>
 
+      <%= label_tag(:height, "Altura (cm)") %><br>
       <%= number_field_tag(:height2, options={min: 80, max: 250, step: 1}) %> Altura (cm)<p/>
+
+      <%= label_tag(:age, "Edad (años)") %><br>
       <%= number_field_tag(:age2, options={min: 4, max: 120, step: 1}) %> Edad <p/>
 
     </div>
