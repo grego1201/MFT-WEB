@@ -8,7 +8,6 @@ class CreateFencers < ActiveRecord::Migration[5.2]
       t.boolean :intimidated
       t.integer :grip
 
-
       t.timestamps
     end
   end
