@@ -1,0 +1,15 @@
+en:
+  fill_fencers:
+    form:
+      title: Fill in the characteristics of each fencer
+      fencer: "Fencer %{number}"
+      grip:
+        description: Select the grip
+        french: French
+        anatomic: Anatomic
+      intimidated:
+        description: Check the next option if the fencer is intimidated
+        label: Intimidated
+      height: Height (cm)
+      age: Age (años)
+      submit: Send

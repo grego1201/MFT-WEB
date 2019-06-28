@@ -1,0 +1,16 @@
+es:
+  fill_fencers:
+    form:
+      title: Rellene las características de cada tirador
+      fencer: "Tirador %{number}"
+      grip:
+        description: Selecciona el puño
+        french: Francés
+        anatomic: Anatómico
+      intimidated:
+        description: Marque la siguiente opción si el tirador se encuentra intimidado
+        label: Intimidado
+      height: Altura (cm)
+      age: Edad (años)
+      submit: Enviar
+
