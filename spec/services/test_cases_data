@@ -1,0 +1,65 @@
+{
+  "tc1": {
+    "description": "All false",
+    "results": {
+      "agressiveness": false,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": false
+    },
+    "fencer1": {
+      "intimidated": false,
+      "age": 18,
+      "height": 160,
+      "grip": 1
+    },
+    "fencer2": {
+      "intimidated": false,
+      "age": 30,
+      "height": 170,
+      "grip": 1
+    }
+  },
+  "tc2": {
+    "description": "Agressive, take blade and short distance",
+    "results": {
+      "agressiveness": true,
+      "short_distance": true,
+      "blade": true,
+      "second_intention": false
+    },
+    "fencer1": {
+      "intimidated": false,
+      "age": 20,
+      "height": 160,
+      "grip": 0
+    },
+    "fencer2": {
+      "intimidated": true,
+      "age": 14,
+      "height": 170,
+      "grip": 1
+    }
+  },
+  "tc3": {
+    "description": "Agressive, take blade and short distance",
+    "results": {
+      "agressiveness": true,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": true
+    },
+    "fencer1": {
+      "intimidated": false,
+      "age": 20,
+      "height": 160,
+      "grip": 1
+    },
+    "fencer2": {
+      "intimidated": true,
+      "age": 18,
+      "height": 160,
+      "grip": 0
+    }
+  }
+}

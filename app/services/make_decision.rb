@@ -37,17 +37,17 @@ class MakeDecision
     age1 = @fencer1[:age]
     age2 = @fencer2[:age]
 
-    if @fencer1[:intimidated]
+    if @fencer2[:intimidated]
       if age1 > age2
-        return 1
+        return 0
       else
-        return 2
+        return 1
       end
     else
       if age1 < age2
         return 1
       else
-        return 0
+        return 2
       end
     end
   end
@@ -58,26 +58,20 @@ class MakeDecision
 
     if height_difference > HEIGHT_DIFF_ERROR
       case grip_distance
+      when 0 || 1
+        return 0
+      when 2
+        return 1
+      end
+    elsif height_difference < HEIGHT_DIFF_ERROR * (-1)
+      case grip_distance
       when 0
         return 1
-      when 1
-        return 2
-      when 2
+      when 1 || 2
         return 2
       end
     else
-      if height_difference > HEIGHT_DIFF_ERROR * (-1)
-        case grip_distance
-        when 0
-          return 0
-        when 1
-          return 0
-        when 2
-          return 1
-        end
-      else
-        return grip_distance
-      end
+      return grip_distance
     end
   end
 
@@ -95,7 +89,7 @@ class MakeDecision
   end
 
   def obtain_agressiveness(experience)
-    return true if experience == 1
+    return true if experience == 0
     false
   end
 
