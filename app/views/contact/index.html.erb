@@ -1,16 +1,7 @@
-pagina de contacto<br>
+Página de contacto<br>
 
+Desarrollador de la página: Gregorio B. Patiño Esteo<br>
+Contacto: <%= mail_to("gregoriopatinoesteo@gmail.com") %><br>
+<br><br>
 
-<% if flash[:error] %>
- No se ha podido crear 
-<% end %>
-
-<br>
-
-Sugerencias libres <%= @free_suggests %>
-<%= form_tag do |form| %>
-  <%= label_tag(:username_label, "nombre de usuario") %> <p/>
-  <%= text_field_tag(:username) %> <p/>
-  <%= text_area_tag(:suggest) %> <p/>
-  <%= submit_tag("enviar") %>
-<% end %>
+<%= link_to("Blog Espadas de Calatrava", "https://espadasdecalatrava.blogspot.com/", target:"_blank") %>
