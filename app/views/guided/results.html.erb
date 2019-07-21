@@ -1,17 +1,8 @@
-<%#- if @results[:short_distance]%>
-  <%#fdsafdsa%>
-<%#<%= @results[:short_distance] %>%>
-
-<%#<%= if @short_distance %>%>
-  <%#show short distance%>
-<%#<%= end %>%>
-
 <% if @short_distance == true %>
   This line will be displayed.
 <% end %>
 
-<% @short_distance %>
-<% @agressiveness %>
-<% @blade %>
-<% @second_intention %>
-
+Agresivo: <%= @agressiveness ? "Si" : "No" %> <br>
+Acortar distancia: <%= @short_distance ? "Si" : "No" %><br>
+Coger hierro: <%= @blade ? "Si" : "No" %><br>
+Segunda intención: <%= @second_intention ? "Si" : "No" %><br>

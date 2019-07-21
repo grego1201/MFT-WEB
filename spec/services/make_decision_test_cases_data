@@ -42,7 +42,7 @@
     }
   },
   "tc3": {
-    "description": "Agressive, take blade and short distance",
+    "description": "Agressive, not blade and not short distance, second intention",
     "results": {
       "agressiveness": true,
       "short_distance": false,

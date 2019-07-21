@@ -1,12 +1,13 @@
 class GuidedController < ApplicationController
 
-  FENCER_CHARS = ["age", "intimidated", "height", "grip"]
+  FENCER_CHARS = ["age", "intimidated", "age"]
 
   def index
   end
 
   def obtain_decision
-    results = MakeDecision.new(prepare_decision_params).obtain_decision
+    results = MakeGuidedDecision.new(prepare_decision_params).obtain_decision
+    @results = results
 
     @short_distance = results[:short_distance]
     @agressiveness = results[:agressiveness]
@@ -19,16 +20,22 @@ class GuidedController < ApplicationController
   private
 
   def prepare_decision_params
-    {}.tap do |fencers_params|
-      2.times do |index|
-        fencer_index = "fencer#{index + 1}".to_sym
-        {}.tap do |fencer_chars|
-          FENCER_CHARS.each do |char|
-            fencer_chars.merge!({char.to_sym => params[char + (index + 1).to_s]})
-          end
-          fencers_params.merge!(fencer_index => fencer_chars)
-        end
-      end
+    prepared_params = params.permit(:age, :distance, :intimidated)
+    prepared_params[:distance] = normalize_yne(params[:distance])
+    prepared_params[:age] = normalize_yne(params[:age])
+    prepared_params[:intimidated] = prepared_params[:intimidated].to_i
+    prepared_params
+  end
+
+  def normalize_yne(answer)
+    case answer
+    when 'y'
+      0
+    when 'eq'
+      1
+    when 'n'
+      2
     end
   end
+
 end

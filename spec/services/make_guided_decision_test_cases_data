@@ -1,0 +1,44 @@
+{
+  "tc1": {
+    "description": "All false",
+    "results": {
+      "agressiveness": false,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": false
+    },
+    "options_choosen": {
+      "age": 0,
+      "distance": 2,
+      "intimidated": 0
+    }
+  },
+  "tc2": {
+    "description": "Agressive, take blade and short distance",
+    "results": {
+      "agressiveness": true,
+      "short_distance": true,
+      "blade": true,
+      "second_intention": false
+    },
+    "options_choosen": {
+      "age": 2,
+      "distance": 0,
+      "intimidated": 1
+    }
+  },
+  "tc3": {
+    "description": "Agressive, not blade and not short distance, second intention",
+    "results": {
+      "agressiveness": true,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": true
+    },
+    "options_choosen": {
+      "age": 2,
+      "distance": 1,
+      "intimidated": 1
+    }
+  }
+}

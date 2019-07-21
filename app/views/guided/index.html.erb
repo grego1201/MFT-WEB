@@ -1,1 +1,17 @@
-<h1> Pendiente de desarrollo </h1>
+<h1> <%= t('guided.form.title') %></h1>
+<h4> <%= t('guided.form.description') %></h4>
+
+<%= form_tag do |form| %>
+
+  <div class="row">
+    <div class="col-xs-5">
+
+      <%= rb_yne(:distance) %>
+      <%= rb_yne(:age) %>
+      <%= label_tag(:intimidated,  t('guided.form.intimidated.description')) %><br>
+      <%= check_box_tag(:intimidated, value = 1) %> <%= t('fill_fencers.form.intimidated.label') %><p/>
+
+      <%= submit_tag(t('fill_fencers.form.submit')) %>
+    </div>
+  </div>
+<% end %>

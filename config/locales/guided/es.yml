@@ -1,0 +1,14 @@
+es:
+  guided:
+    form:
+      age: ¿Eres mas joven que él? (Con 2-3 años de diferencia)
+      answers:
+        y: Si
+        n: "No"
+        eq: Igual
+      description: Responda a las siguientes preguntas y después haga click en enviar para obtener los resultados
+      distance: ¿Tienes mas distancia que él?
+      intimidated:
+        description: Marque la siguiente opción si el tirador se encuentra intimidado
+        label: Intimidado
+      title: Herramienta guiada
