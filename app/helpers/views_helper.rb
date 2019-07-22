@@ -1,4 +1,12 @@
 module ViewsHelper
+
+  def actual_full_path
+    parsed_locale = request.original_fullpath.split('/').second
+    path = request.original_fullpath.split('/')
+    parsed_path = I18n.available_locales.map(&:to_s).include?(parsed_locale) ? path[2..-1] : path[1..-1]
+    parsed_path.nil? ? '/' : parsed_path.join('/')
+  end
+
   def rb_yne(form_label)
     answers = %w(y n eq)
     tags = html_escape('')
@@ -10,5 +18,14 @@ module ViewsHelper
       tags << '<p/>'.html_safe;
     }
     tags
+  end
+
+  def add_locale_to_url(destination_url)
+    '/' + I18n.locale.to_s + destination_url
+  end
+
+  def swap_locale
+    locale = I18n.locale.to_s == 'es' ? 'en' : 'es'
+    '/' + locale + '/' + actual_full_path.split('?').first
   end
 end

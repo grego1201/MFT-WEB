@@ -1,8 +1,4 @@
-<% if @short_distance == true %>
-  This line will be displayed.
-<% end %>
-
-Agresivo: <%= @agressiveness ? "Si" : "No" %> <br>
-Acortar distancia: <%= @short_distance ? "Si" : "No" %><br>
-Coger hierro: <%= @blade ? "Si" : "No" %><br>
-Segunda intención: <%= @second_intention ? "Si" : "No" %><br>
+<%= t('fill_fencers.results.aggresive') %> <%= @agressiveness ? t('yes') : t('no') %> <br>
+<%= t('fill_fencers.results.short_distance') %>  <%= @short_distance ? t('yes') : t('no') %><br>
+<%= t('fill_fencers.results.blade') %> <%= @blade ? t('yes') : t('no') %><br>
+<%= t('fill_fencers.results.second_intention') %> <%= @second_intention ? t('yes') : t('no') %><br>

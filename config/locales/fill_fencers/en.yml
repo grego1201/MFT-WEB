@@ -11,5 +11,10 @@ en:
         description: Check the next option if the fencer is intimidated
         label: Intimidated
       height: Height (cm)
-      age: Age (años)
+      age: Age (years)
       submit: Send
+    results:
+      aggresive: "Aggressive: "
+      short_distance: "Short distance: "
+      blade: "Blade: "
+      second_intention: "Second intention: "

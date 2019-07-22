@@ -13,4 +13,8 @@ es:
       height: Altura (cm)
       age: Edad (años)
       submit: Enviar
-
+    results:
+      aggresive: "Agresivo: "
+      short_distance: "Acortar distancia: "
+      blade: "Hierro: "
+      second_intention: "Segunda intención: "

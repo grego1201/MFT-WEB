@@ -12,3 +12,8 @@ es:
         description: Marque la siguiente opción si el tirador se encuentra intimidado
         label: Intimidado
       title: Herramienta guiada
+    results:
+      aggresive: "Agresivo: "
+      short_distance: "Acortar distancia: "
+      blade: "Hierro: "
+      second_intention: "Segunda intención: "

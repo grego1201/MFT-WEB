@@ -3,11 +3,12 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Inicio</a>
-      <a class="navbar-brand" href="/fill_fencer/index">Llenar</a>
-      <a class="navbar-brand" href="/guided/index">Guiado</a>
-      <a class="navbar-brand" href="/contact/index">Contacto</a>
-      <a class="navbar-brand" href="/show_suggests/index">Sugerencias</a>
+      <a class="navbar-brand" href=<%= add_locale_to_url('/') %>>Inicio</a>
+      <a class="navbar-brand" href=<%= add_locale_to_url('/fill_fencer/index') %>>Llenar</a>
+      <a class="navbar-brand" href=<%= add_locale_to_url('/guided/index') %>>Guiado</a>
+      <a class="navbar-brand" href=<%= add_locale_to_url('/contact/index') %>>Contacto</a>
+      <a class="navbar-brand" href=<%= add_locale_to_url('/show_suggests/index') %>>Sugerencias</a>
+      <a class="navbar-brand" href=<%= swap_locale %>>Idioma</a>
     </div>
   </div>
 </nav>

@@ -14,7 +14,8 @@ class FillFencerController < ApplicationController
     @blade = results[:blade]
     @second_intention = results[:second_intention]
 
-    render '/fill_fencer/results'
+    redirect_path = '/guided/results' + '?locale=' + take_referrer_locale
+    redirect_to redirect_path
   end
 
   private
@@ -33,4 +34,8 @@ class FillFencerController < ApplicationController
     end
   end
 
+  def take_referrer_locale
+    parsed_locale = request.referrer.split('/').fourth
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : I18n.default_locale.to_s
+  end
 end
