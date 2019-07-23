@@ -1,0 +1,11 @@
+es:
+  contact:
+    title: Página de contacto
+    who_i_am:
+      title: ¿Quien soy?
+      text: |
+        Me llamo Gregorio Baldomero Patiño Esteo, actualmente soy tirador del
+        club espadas de calatrava de Ciudad Real el cuyo blog lo podréis encontrar
+        aquí (%{cva_blog_link}). podréis contactar conmigo a través de mi
+        correo %{personal_mail} o a través de mis redes sociales @grego1201
+        tanto twitter como instagram, o en facebook por mi nombre.
