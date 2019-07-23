@@ -26,6 +26,6 @@ module ViewsHelper
 
   def swap_locale
     locale = I18n.locale.to_s == 'es' ? 'en' : 'es'
-    '/' + locale + '/' + actual_full_path.split('?').first
+    '/' + locale + '/' + actual_full_path.split('?').first.to_s
   end
 end

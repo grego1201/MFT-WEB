@@ -1,0 +1,11 @@
+en:
+  contact:
+    title: Contact Page
+    who_i_am:
+      title: Who I am?
+      text: |
+        My name is Gregorio Baldomero Patiño Esteo, I am currently a fencer
+        of Espadas de Calatrava club of Ciudad Real whose blog you can find
+        here (%{cva_blog_link}) links of interest below. you can contact me through me
+        mail %{personal_mail} or through my social networks @grego1201
+        both twitter and instagram, or on facebook by my name.

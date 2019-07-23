@@ -1,7 +1,6 @@
-Página de contacto<br>
+<h1><%= t('contact.title') %></h1><br>
 
-Desarrollador de la página: Gregorio B. Patiño Esteo<br>
-Contacto: <%= mail_to("gregoriopatinoesteo@gmail.com") %><br>
-<br><br>
+<h3><%= t('contact.who_i_am.title') %></h3><br>
+<%=raw t('contact.who_i_am.text', { cva_blog_link:link_to("Blog Espadas de Calatrava", "https://espadasdecalatrava.blogspot.com/", target:"_blank"), personal_mail: mail_to("gregoriopatinoesteo@gmail.com") } ) %><br>
 
-<%= link_to("Blog Espadas de Calatrava", "https://espadasdecalatrava.blogspot.com/", target:"_blank") %>
+<%=  %>
