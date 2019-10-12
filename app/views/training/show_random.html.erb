@@ -1,0 +1,32 @@
+<%= label_tag(:all_actions, t('Acciones disponibles')) %><br>
+<button id="hide" style="display: none;">Ocultar</button>
+<button id="show">Mostrar</button>
+<div id="all_actions_div" style="display: none;">
+  <%- @actions.each do |action| %>
+    <%= action %><br>
+  <%- end %>
+</div>
+
+<br>
+<br>
+<br>
+
+<%= label_tag(:all_actions, t('Acciones generadas')) %><br>
+<%- @generated_actions.each do |action| %>
+  <%= action %><br>
+<%- end %>
+
+<br>
+<br>
+<br>
+
+<%= form_tag do |form| %>
+  <%= label_tag(:actions_number_label, t('Escoja cuantas acciones desea practicar')) %><br>
+  <%= number_field_tag(:actions_number, options={min: 1, max: @actions.count, step: 1}) %><p/>
+
+  <br>
+  <br>
+
+  <%= submit_tag('Generar acciones') %>
+<% end %>
+

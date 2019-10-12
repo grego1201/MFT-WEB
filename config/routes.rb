@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     get 'contact/index'
     post 'contact/index', to: 'contact#create_suggest'
     get 'show_suggests/index'
+    get 'training/index'
+    post 'training/index', to: 'training#show_random'
+
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     #
     root 'welcome#index'
