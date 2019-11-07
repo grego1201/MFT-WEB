@@ -1,4 +1,12 @@
-<%= t('fill_fencers.results.aggresive') %> <%= @agressiveness ? t('yes') : t('no') %> <br>
-<%= t('fill_fencers.results.short_distance') %>  <%= @short_distance ? t('yes') : t('no') %><br>
-<%= t('fill_fencers.results.blade') %> <%= @blade ? t('yes') : t('no') %><br>
-<%= t('fill_fencers.results.second_intention') %> <%= @second_intention ? t('yes') : t('no') %><br>
+<div class="alert alert-<%= @agressiveness ? 'success' : 'danger'%>" role="alert">
+  <%= t('fill_fencers.results.aggresive') %> <%= @agressiveness ? t('yes') : t('no') %> <br>
+</div>
+<div class="alert alert-<%= @agressiveness ? 'success' : 'danger'%>" role="alert">
+  <%= t('fill_fencers.results.short_distance') %>  <%= @short_distance ? t('yes') : t('no') %><br>
+</div>
+<div class="alert alert-<%= @agressiveness ? 'success' : 'danger'%>" role="alert">
+  <%= t('fill_fencers.results.blade') %> <%= @blade ? t('yes') : t('no') %><br>
+</div>
+<div class="alert alert-<%= @agressiveness ? 'success' : 'danger'%>" role="alert">
+  <%= t('fill_fencers.results.second_intention') %> <%= @second_intention ? t('yes') : t('no') %><br>
+</div>
