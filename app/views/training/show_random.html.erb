@@ -1,6 +1,6 @@
 <%= label_tag(:all_actions, t('Acciones disponibles')) %><br>
-<button id="hide" style="display: none;">Ocultar</button>
-<button id="show">Mostrar</button>
+<button id="hide" style="display: none;" class="btn btn-light">Ocultar</button>
+<button id="show" class="btn btn-light">Mostrar</button>
 <div id="all_actions_div" style="display: none;">
   <%- @actions.each do |action| %>
     <%= action %><br>
@@ -27,6 +27,6 @@
   <br>
   <br>
 
-  <%= submit_tag('Generar acciones') %>
+  <%= submit_tag('Generar acciones', class: 'btn btn-primary') %>
 <% end %>
 

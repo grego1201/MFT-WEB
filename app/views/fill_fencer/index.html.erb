@@ -23,7 +23,7 @@
     </div>
 
     <div class="col-xs-5">
-      <%= label_tag(:fencer2, t('fill_fencers.form.fencer', {number: 1})) %> <p/>
+      <%= label_tag(:fencer2, t('fill_fencers.form.fencer', {number: 2})) %> <p/>
 
       <%= label_tag(:grip_label, t('fill_fencers.form.grip.description')) %><br>
       <%= radio_button_tag(:grip2, "french") %> <%= t('fill_fencers.form.grip.french') %><p/>
@@ -41,7 +41,9 @@
       <%= number_field_tag(:age2, options={min: 4, max: 120, step: 1}) %><p/>
     </div>
   </div>
-  <div class="row">
-    <%= submit_tag(t('fill_fencers.form.submit')) %>
+  <div class="col-xs-5">
+  </div>
+  <div class="col-xs-5">
+    <%= submit_tag(t('fill_fencers.form.submit'), class: 'btn btn-primary float-right') %>
   </div>
 <% end %>

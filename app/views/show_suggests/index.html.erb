@@ -1,15 +1,18 @@
 <% if flash[:error] %>
- No se ha podido crear
+  <div class="alert alert-danger" role="alert">
+    No se ha podido crear
+  </div>
 <% end %>
 
 <br>
-
-Sugerencias libres <%= @free_suggests %>
+<div class="alert alert-primary" role="alert">
+  Sugerencias libres <%= @free_suggests %>
+</div>
 <%= form_tag do |form| %>
   <%= label_tag(:username_label, "nombre de usuario") %> <p/>
   <%= text_field_tag(:username) %> <p/>
   <%= text_area_tag(:suggest) %> <p/>
-  <%= submit_tag("enviar") %>
+  <%= submit_tag("enviar", class: 'btn btn-primary') %>
 <% end %>
 <% @suggestions.each_with_index do |suggestion, i| %>
   Sugerencia <%= suggestion.id %><br>

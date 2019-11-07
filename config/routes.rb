@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     post 'fill_fencer/index', to: 'fill_fencer#obtain_decision'
     get 'welcome/index'
     get 'contact/index'
-    post 'contact/index', to: 'contact#create_suggest'
     get 'show_suggests/index'
+    post 'show_suggests/index', to: 'show_suggests#create_suggest'
     get 'training/index'
     post 'training/index', to: 'training#show_random'
 
