@@ -44,6 +44,7 @@ gem "rubyzip", ">= 1.3.0"
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

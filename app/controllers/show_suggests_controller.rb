@@ -1,7 +1,7 @@
 class ShowSuggestsController < ApplicationController
 
   def index
-    @suggestions = Suggestion.all
+    @suggestions = Suggestion.all.paginate(page: params[:page], per_page: params[:per_page] || 10)
     @free_suggests = 100 - Suggestion.where('created_at > ? ', Time.now - 1.hour).count
   end
 

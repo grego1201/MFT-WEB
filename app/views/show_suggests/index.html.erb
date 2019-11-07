@@ -20,3 +20,5 @@
   <%= suggestion.suggest%>
   <br><br>
 <%end%>
+
+<%= will_paginate @suggestions, renderer: BootstrapPagination::Rails %>
