@@ -9,7 +9,10 @@ AllCops:
     - vendor/bundle/**/*
     - app/views/**/*.erb
     - app/assets/**/*
+    - app/**/*.swp
 Metrics/LineLength:
-    Max: 100
+    Max: 120
+Metrics/MethodLength:
+    Max: 15
 Documentation:
   Enabled: false

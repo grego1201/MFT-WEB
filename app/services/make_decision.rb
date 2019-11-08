@@ -39,40 +39,49 @@ class MakeDecision
     age2 = @fencer2[:age]
 
     if @fencer2[:intimidated]
-      if age1 > age2
-        return 0
-      else
-        return 1
-      end
+      return 0 if age1 > age2
+
+      1
     else
-      if age1 < age2
-        return 1
-      else
-        return 2
-      end
+      return 1 if age1 < age2
+
+      2
     end
   end
 
   def obtain_distance
     height_difference = @fencer1[:height] - @fencer2[:height]
     grip_distance = obtain_grip_distance
+    distance = calculate_distance(grip_distance, height_difference)
 
+    distance
+  end
+
+  def calculate_distance(grip_distance, height_difference)
     if height_difference > HEIGHT_DIFF_ERROR
-      case grip_distance
-      when 0 || 1
-        return 0
-      when 2
-        return 1
-      end
+      calculate_higher(grip_distance)
     elsif height_difference < HEIGHT_DIFF_ERROR * -1
-      case grip_distance
-      when 0
-        return 1
-      when 1 || 2
-        return 2
-      end
+      calculate_lower(grip_distance)
     else
-      return grip_distance
+      grip_distance
+    end
+  end
+
+  def calculate_higher(grip_distance)
+    case grip_distance
+    when 0 || 1
+      0
+    when 2
+      1
+    end
+  end
+
+  def calculate_lower(grip_distance)
+    case grip_distance
+    when 0
+      1
+    when 1 || 2
+      2
     end
   end
 
@@ -100,7 +109,7 @@ class MakeDecision
 
   def second_intention?(short_distance, experience)
     return false if short_distance
-    return true if experience.zero
+    return true if experience.zero?
 
     false
   end
