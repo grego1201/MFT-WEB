@@ -8,6 +8,7 @@ AllCops:
     - bin/**/*
     - vendor/bundle/**/*
     - app/views/**/*.erb
+    - app/assets/**/*
 Metrics/LineLength:
     Max: 100
 Documentation:
