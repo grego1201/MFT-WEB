@@ -36,3 +36,7 @@ jobs:
           name: Create DB
           command: bundle exec rails db:create
 
+      - run:
+          name: Tests
+          command: bundle exec rspec
+
