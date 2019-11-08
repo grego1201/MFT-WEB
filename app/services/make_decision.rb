@@ -80,17 +80,14 @@ class MakeDecision
     grip1 = @fencer1[:grip]
     grip2 = @fencer2[:grip]
 
-    if grip1 == grip2
-      return 1
-    elsif grip1 == 'French'
-      return 0
-    else
-      return 2
-    end
+    return 1 if grip1 == grip2
+    return 0 if grip1 == 'French'
+
+    2
   end
 
   def obtain_agressiveness(experience)
-    return true if experience == 0
+    return true if experience.zero?
 
     false
   end
@@ -103,7 +100,7 @@ class MakeDecision
 
   def second_intention?(short_distance, experience)
     return false if short_distance
-    return true if experience == 0
+    return true if experience.zero
 
     false
   end
