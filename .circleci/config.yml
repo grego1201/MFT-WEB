@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    parallelism: 3
+    working_directory: ~/circleci-demo-ruby-rails
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node  # language image
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: circleci-demo-ruby
+          RAILS_ENV: test
+      - image: circleci/postgres:9.5-alpine  # service image
+        environment:
+          POSTGRES_USER: circleci-demo-ruby
+          POSTGRES_DB: rails_blog
+          POSTGRES_PASSWORD: ""
+    steps:
+      - checkout
+
+      - run:
+          name: Install bundles
+          command: |
+            gem update --system
+            gem install bundler
+            bundler update --bundler
+
+      - run:
+          name: Bundle install
+          command: bundle check --path vendor/bundle || bundle install --deployment
+
