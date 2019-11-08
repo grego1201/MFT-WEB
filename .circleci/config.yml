@@ -21,11 +21,10 @@ jobs:
       - checkout
 
       - run:
-          name: Install bundles
+          name: install dependencies
           command: |
             gem update --system
             gem install bundler
-            bundler update --bundler
 
       - run:
           name: Bundle install
