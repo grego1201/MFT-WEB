@@ -7,5 +7,7 @@ AllCops:
     - db/schema.rb
     - bin/**/*
     - vendor/bundle/**/*
+    - app/views/**/*.html.erb
+    - app/views/**/*.erb
 Metrics/LineLength:
     Max: 100
