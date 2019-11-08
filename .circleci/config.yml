@@ -4,8 +4,9 @@ jobs:
     parallelism: 3
     working_directory: ~/circleci-demo-ruby-rails
     docker:
-      - image: circleci/ruby:2.4.2-jessie-node  # language image
+      - image: circleci/ruby:2.6.3  # language image
         environment:
+          BUNDLER_VERSION: 2.0.1
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
@@ -21,9 +22,10 @@ jobs:
       - checkout
 
       - run:
-          name: install dependencies
+          name: Configure Bundler
           command: |
-            gem update --system
+            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            source $BASH_ENV
             gem install bundler
 
       - run:
