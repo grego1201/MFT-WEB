@@ -4,3 +4,6 @@ AllCops:
     - config.ru
   Excludes:
     - db/schema.rb
+    - bin/**
+Metrics/LineLength:
+    Max: 100
