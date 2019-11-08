@@ -1,5 +1,6 @@
-module ViewsHelper
+# frozen_string_literal: true
 
+module ViewsHelper
   def actual_full_path
     parsed_locale = request.original_fullpath.split('/').second
     path = request.original_fullpath.split('/')
@@ -8,15 +9,15 @@ module ViewsHelper
   end
 
   def rb_yne(form_label)
-    answers = %w(y n eq)
+    answers = %w[y n eq]
     tags = html_escape('')
-    tags << label_tag(:form_label, I18n.t("guided.form.#{form_label.to_s}"))
+    tags << label_tag(:form_label, I18n.t("guided.form.#{form_label}"))
     tags << '<br/>'.html_safe
-    answers.each { |answer|
-      tags <<  radio_button_tag(form_label, answer.to_s);
-      tags << I18n.t("guided.form.answers.#{answer}");
-      tags << '<p/>'.html_safe;
-    }
+    answers.each do |answer|
+      tags << radio_button_tag(form_label, answer.to_s)
+      tags << I18n.t("guided.form.answers.#{answer}")
+      tags << '<p/>'.html_safe
+    end
     tags
   end
 

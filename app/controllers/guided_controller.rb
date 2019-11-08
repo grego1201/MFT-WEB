@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 class GuidedController < ApplicationController
+  FENCER_CHARS = %w[age intimidated age].freeze
 
-  FENCER_CHARS = ["age", "intimidated", "age"]
-
-  def index
-  end
+  def index; end
 
   def obtain_decision
     results = MakeGuidedDecision.new(prepare_decision_params).obtain_decision
@@ -43,5 +43,4 @@ class GuidedController < ApplicationController
     parsed_locale = request.referrer.split('/').fourth
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : I18n.default_locale.to_s
   end
-
 end

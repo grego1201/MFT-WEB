@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 class FillFencerController < ApplicationController
+  FENCER_CHARS = %w[age intimidated height grip].freeze
 
-  FENCER_CHARS = ["age", "intimidated", "height", "grip"]
-
-  def index
-  end
+  def index; end
 
   def obtain_decision
     results = MakeDecision.new(prepare_decision_params).obtain_decision
@@ -26,7 +26,7 @@ class FillFencerController < ApplicationController
         fencer_index = "fencer#{index + 1}".to_sym
         {}.tap do |fencer_chars|
           FENCER_CHARS.each do |char|
-            fencer_chars.merge!({char.to_sym => params[char + (index + 1).to_s]})
+            fencer_chars.merge!(char.to_sym => params[char + (index + 1).to_s])
           end
           fencers_params.merge!(fencer_index => fencer_chars)
         end

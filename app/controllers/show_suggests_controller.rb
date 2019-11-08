@@ -1,17 +1,18 @@
-class ShowSuggestsController < ApplicationController
+# frozen_string_literal: true
 
+class ShowSuggestsController < ApplicationController
   def index
     @suggestions = Suggestion.all.paginate(page: params[:page], per_page: params[:per_page] || 10)
     @free_suggests = 100 - Suggestion.where('created_at > ? ', Time.now - 1.hour).count
   end
 
   def create_suggest
-    suggestion = Suggestion.new(username: params["username"], suggest: params["suggest"])
+    suggestion = Suggestion.new(username: params['username'], suggest: params['suggest'])
 
     if suggestion.save
-      flash[:success] = "Se ha podido crear"
+      flash[:success] = 'Se ha podido crear'
     else
-      flash[:error] = "no se ha podido crear"
+      flash[:error] = 'no se ha podido crear'
     end
 
     redirect_path = '/show_suggests/index' + '?locale=' + take_referrer_locale
