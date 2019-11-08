@@ -4,7 +4,7 @@ jobs:
     parallelism: 3
     working_directory: ~/circleci-demo-ruby-rails
     docker:
-      - image: circleci/ruby:2.6.3  # language image
+      - image: circleci/ruby:2.6.3-node  # language image
         environment:
           BUNDLER_VERSION: 2.0.1
           BUNDLE_JOBS: 3
@@ -31,4 +31,8 @@ jobs:
       - run:
           name: Bundle install
           command: bundle check --path vendor/bundle || bundle install --deployment
+
+      - run:
+          name: Create DB
+          command: bundle exec rails db:create
 
