@@ -2,8 +2,10 @@ AllCops:
   Includes:
     - Rakefile
     - config.ru
+    - app/**/*
   Excludes:
     - db/schema.rb
-    - bin/**
+    - bin/**/*
+    - vendor/bundle/**/*
 Metrics/LineLength:
     Max: 100
