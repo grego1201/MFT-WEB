@@ -32,3 +32,6 @@
 
 # Ignore vim swap files
 *.swp
+
+# Ignore vendor bundle
+vendor/bundle/**/*

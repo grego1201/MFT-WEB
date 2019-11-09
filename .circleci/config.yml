@@ -40,3 +40,6 @@ jobs:
           name: Tests
           command: bundle exec rspec
 
+      - run:
+          name: Rubocop
+          command: bundle exec rubocop
