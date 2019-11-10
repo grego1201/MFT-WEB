@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_page
-    path = request.path.split('/')[2..-1].join('/')
-    @current_page = path.empty? ? 'home' : path.split('/').first
+    path = request.path.split('/')[2..-1]&.join('/')
+    @current_page = path.nil? ? 'home' : path.split('/').first
   end
 end
