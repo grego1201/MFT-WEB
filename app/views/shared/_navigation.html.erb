@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href=<%= add_locale_to_url('/') %>>MyFencingTrainer <%= image_tag("logo.jpeg", width: 30, height: 30, class: "d-inline-block align-top") %></a>
+  <a class="navbar-brand" href=<%= add_locale_to_url('/') %>><%= image_tag("logo.jpg", width: 30, height: 30, class: "d-inline-block align-top") %> MyFencingTrainer</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item <%= @current_page == 'home' ? 'active' : '' %>">
