@@ -1,0 +1,11 @@
+es:
+  suggests:
+    form:
+      submit: Enviar
+      suggest: Sugerencia
+      user_name: Nombre de usuario
+      create_fail: La sugerencia no se ha podido crear
+    free_suggest: "Sugerencias libres: %{number}"
+    suggest:
+      suggest_number: "Sugerencia: %{number}"
+      user: "Nombre de usuario: %{user}"
