@@ -1,0 +1,8 @@
+es:
+  training:
+    actions_label: Acciones disponibles
+    hide: Ocultar
+    show: Mostrar
+    form:
+      label: Escoja cuantas acciones desea practicar
+      generate: Generar acciones

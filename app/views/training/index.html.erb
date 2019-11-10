@@ -1,6 +1,6 @@
-<%= label_tag(:all_actions, t('Acciones disponibles')) %><br>
-<button id="hide" style="display: none;" class="btn btn-light">Ocultar</button>
-<button id="show" class="btn btn-light">Mostrar</button>
+<%= label_tag(:all_actions, t('training.actions_label')) %><br>
+<button id="hide" style="display: none;" class="btn btn-light"><%= t('training.hide') %></button>
+<button id="show" class="btn btn-light"><%= t('training.show') %></button>
 <div id="all_actions_div" style="display: none;">
   <%- @actions.each do |action| %>
     <%= action %><br>
@@ -12,11 +12,11 @@
 <br>
 
 <%= form_tag do |form| %>
-  <%= label_tag(:actions_number_label, t('Escoja cuantas acciones desea practicar')) %><br>
+  <%= label_tag(:actions_number_label, t('training.form.label')) %><br>
   <%= number_field_tag(:actions_number, 1, min: 1, max: @actions.count, step: 1) %><p/>
 
   <br>
   <br>
 
-  <%= submit_tag('Generar acciones', class: 'btn btn-primary') %>
+  <%= submit_tag(t('training.form.generate'), class: 'btn btn-primary') %>
 <% end %>
