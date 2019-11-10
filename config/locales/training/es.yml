@@ -1,0 +1,22 @@
+es:
+  training:
+    actions:
+      - 'Finta y pase'
+      - 'Contra de sexta'
+      - 'Contra-ataque'
+      - 'Ligamento'
+      - 'Flecha'
+      - 'Finta, Flecha'
+      - 'Fondo'
+      - 'Marcha fondo'
+      - 'Flecha provocando su cuarta y tocar en remix'
+      - 'Flecha provocando su sexta y tocar en remix'
+      - 'Tocado en fin de pista'
+      - 'Tocado en inicio de pista'
+      - 'Finta y flecha'
+    actions_label: Acciones disponibles
+    hide: Ocultar
+    show: Mostrar
+    form:
+      label: Escoja cuantas acciones desea practicar
+      generate: Generar acciones

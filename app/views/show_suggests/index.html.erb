@@ -1,22 +1,23 @@
 <% if flash[:error] %>
   <div class="alert alert-danger" role="alert">
-    No se ha podido crear
+    <%= t('suggests.form.create_fail') %>
   </div>
 <% end %>
 
 <br>
 <div class="alert alert-primary" role="alert">
-  Sugerencias libres <%= @free_suggests %>
+  <%= label_tag(:free_suggest_label, t('suggests.free_suggest', {number: @free_suggests})) %> <p/>
 </div>
 <%= form_tag do |form| %>
-  <%= label_tag(:username_label, "nombre de usuario") %> <p/>
+  <%= label_tag(:username_label, t('suggests.form.user_name')) %> <p/>
   <%= text_field_tag(:username) %> <p/>
+  <%= label_tag(:suggest_label, t('suggests.form.suggest')) %> <p/>
   <%= text_area_tag(:suggest) %> <p/>
-  <%= submit_tag("enviar", class: 'btn btn-primary') %>
+  <%= submit_tag(t('fill_fencers.form.submit'), class: 'btn btn-primary') %>
 <% end %>
 <% @suggestions.each_with_index do |suggestion, i| %>
-  Sugerencia <%= suggestion.id %><br>
-  <%= suggestion.username%> <br>
+  <%= t('suggests.suggest.suggest_number', { number: suggestion.id }) %> <br>
+  <%= t('suggests.suggest.user', { user: suggestion.username }) %> <br>
   <%= suggestion.suggest%>
   <br><br>
 <%end%>
