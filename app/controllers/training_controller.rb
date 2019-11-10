@@ -1,14 +1,7 @@
 # frozen_string_literal: true
 
 class TrainingController < ApplicationController
-  ACTIONS = [
-    'Finta y pase', 'Contra de sexta', 'Batir, avanzada', 'Tocado al pie',
-    'Contra-ataque', 'Contra-tiempo', 'Directo', 'Provocar cuerpo a cerpo',
-    'Ligamento', 'Flecha', 'Finta, Flecha', 'Fondo', 'Marcha fondo', "Flecha
-    provocando su cuarta y tocar en remix", "Flecha provocando su sexta
-    y tocar en remix", 'Tocado en fin de pista', 'Tocado en inicio de pista',
-    'Finta y flecha'
-  ].freeze
+  ACTIONS = I18n.t('training.actions')
 
   def index
     @actions = ACTIONS
