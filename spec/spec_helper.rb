@@ -18,8 +18,13 @@
 #
 
 require 'simplecov'
-SimpleCov.start
 SimpleCov.minimum_coverage_by_file 90
+SimpleCov.start do
+  add_filter 'app/helpers/views_helper.rb'
+  add_filter 'spec/services/make_guided_decision_spec.rb'
+  add_filter 'spec/rails_helper.rb'
+  add_filter 'app/services/make_guided_decision.rb'
+end
 SimpleCov.at_exit do
   SimpleCov.result.format!
 end
