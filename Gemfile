@@ -69,6 +69,7 @@ group :test do
   gem 'chromedriver-helper'
 
   gem 'rspec-rails', '~> 3.8'
+  gem 'simplecov', require: false, group: :test
 end
 
 group :production do

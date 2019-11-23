@@ -40,5 +40,19 @@
       "distance": 1,
       "intimidated": 1
     }
+  },
+  "tc4": {
+    "description": "Agressive, take blade and short distance",
+    "results": {
+      "agressiveness": false,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": false
+    },
+    "options_choosen": {
+      "age": 2,
+      "distance": 0,
+      "intimidated": 0
+    }
   }
 }
