@@ -13,6 +13,16 @@ es:
       height: Altura (cm)
       age: Edad (años)
       submit: Enviar
+      ranking: Ranking
+      handness:
+        description: Mano utilizada
+        right: Diestra
+        left: Zurda
+      weapon:
+        description: Arma principal
+        epee: Espada
+        sabre: Sable
+        foil: Florete
     results:
       aggresive: "Agresivo: "
       short_distance: "Acortar distancia: "

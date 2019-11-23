@@ -13,6 +13,16 @@ en:
       height: Height (cm)
       age: Age (years)
       submit: Send
+      ranking: Ranking
+      handness:
+        description: Main hand
+        right: Right
+        left: Left
+      weapon:
+        description: Main weapon
+        epee: Epee
+        sabre: Sabre
+        foil: Foil
     results:
       aggresive: "Aggressive: "
       short_distance: "Short distance: "
