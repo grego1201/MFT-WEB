@@ -1,0 +1,22 @@
+en:
+  training:
+    actions:
+      - 'Finish and pass'
+      - 'Against sixth'
+      - 'Counterattack'
+      - 'Ligament'
+      - 'Arrow'
+      - 'Finta, Arrow'
+      - 'Background'
+      - 'March background'
+      - 'Arrow causing his fourth and playing on remix'
+      - 'Arrow causing his sixth and playing remix'
+      - 'Touched at the end of the track'
+      - 'Played at the start of the track'
+      - 'Finta and arrow'
+    actions_label: Available actions
+    hide: Hide
+    show: Show
+    form:
+      label: Choose how many actions do you want to practice
+      generate: Generate actions
