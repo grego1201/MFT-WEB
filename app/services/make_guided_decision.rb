@@ -20,7 +20,7 @@ class MakeGuidedDecision
   private
 
   def obtain_experience
-    if @intimidated
+    if @intimidated.positive?
       @age == 2 ? 0 : 1
     elsif @age.zero?
       1
