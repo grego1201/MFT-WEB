@@ -16,6 +16,10 @@ describe MakeDecision do
     expect(prepare_test_case(test_cases_data['tc3'])).to be_truthy
   end
 
+  it 'Test case 4' do
+    expect(prepare_test_case(test_cases_data['tc4'])).to be_truthy
+  end
+
   private
 
   def prepare_test_case(tc_data)
@@ -32,13 +36,19 @@ describe MakeDecision do
         age: fencer1.age.to_s,
         intimidated: fencer1.intimidated ? 1 : 0,
         height: fencer1.height.to_s,
-        grip: fencer1.grip == 1 ? 'french' : 'anatomic'
+        grip: fencer1.grip == 1 ? 'french' : 'anatomic',
+        ranking: fencer1.ranking,
+        handness: fencer1.handness,
+        weapon: fencer1.weapon
       },
       fencer2: {
         age: fencer2.age.to_s,
         intimidated: fencer2.intimidated ? 1 : 0,
         height: fencer2.height.to_s,
-        grip: fencer2.grip == 1 ? 'french' : 'anatomic'
+        grip: fencer2.grip == 1 ? 'french' : 'anatomic',
+        ranking: fencer2.ranking,
+        handness: fencer2.handness,
+        weapon: fencer2.weapon
       }
     }
   end

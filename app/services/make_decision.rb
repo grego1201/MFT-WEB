@@ -16,13 +16,7 @@ class MakeDecision
     short_distance = short_distance?(distance, agressiveness)
     blade = short_distance
     second_intention = second_intention?(short_distance, experience)
-    {
-      agressiveness: agressiveness,
-      short_distance: short_distance,
-      blade: blade,
-      second_intention: second_intention,
-      risk: risk
-    }
+    results_to_h(agressiveness, short_distance, blade, second_intention, risk)
   end
 
   private
@@ -162,5 +156,15 @@ class MakeDecision
       end
       request_params[:tableu] = @tableu
     end
+  end
+
+  def results_to_h(agressiveness, short_distance, blade, second_intention, risk)
+    {
+      agressiveness: agressiveness,
+      short_distance: short_distance,
+      blade: blade,
+      second_intention: second_intention,
+      risk: risk
+    }
   end
 end
