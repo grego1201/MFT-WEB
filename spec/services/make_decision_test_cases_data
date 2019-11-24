@@ -5,7 +5,8 @@
       "agressiveness": false,
       "short_distance": false,
       "blade": false,
-      "second_intention": false
+      "second_intention": false,
+      "risk": 2
     },
     "fencer1": {
       "intimidated": false,
@@ -26,7 +27,8 @@
       "agressiveness": true,
       "short_distance": true,
       "blade": true,
-      "second_intention": false
+      "second_intention": false,
+      "risk": 3
     },
     "fencer1": {
       "intimidated": false,
@@ -47,7 +49,8 @@
       "agressiveness": true,
       "short_distance": false,
       "blade": false,
-      "second_intention": true
+      "second_intention": true,
+      "risk": 3
     },
     "fencer1": {
       "intimidated": false,
