@@ -20,6 +20,18 @@
 
       <%= label_tag(:age, t('fill_fencers.form.age')) %><br>
       <%= number_field_tag(:age1, options={min: 4, max: 120, step: 1}) %><p/>
+
+      <%= label_tag(:ranking_label, t('fill_fencers.form.ranking')) %><br>
+      <%= number_field_tag(:ranking1, options={min: 4, max: 120, step: 1}) %><p/>
+
+      <%= label_tag(:handness_label, t('fill_fencers.form.handness.description')) %><br>
+      <%= radio_button_tag(:handness1, "Right") %> <%= t('fill_fencers.form.handness.right') %><p/>
+      <%= radio_button_tag(:handness1, "Left") %> <%= t('fill_fencers.form.handness.left') %><p/>
+
+      <%= label_tag(:weapon_label, t('fill_fencers.form.weapon.description')) %><br>
+      <%= radio_button_tag(:weapon1, "Epee") %> <%= t('fill_fencers.form.weapon.epee') %><p/>
+      <%= radio_button_tag(:weapon1, "Sabre") %> <%= t('fill_fencers.form.weapon.sabre') %><p/>
+      <%= radio_button_tag(:weapon1, "Foil") %> <%= t('fill_fencers.form.weapon.foil') %><p/>
     </div>
 
     <div class="col-xs-5">
@@ -39,11 +51,27 @@
 
       <%= label_tag(:age, t('fill_fencers.form.age')) %><br>
       <%= number_field_tag(:age2, options={min: 4, max: 120, step: 1}) %><p/>
+
+      <%= label_tag(:ranking_label, t('fill_fencers.form.ranking')) %><br>
+      <%= number_field_tag(:ranking2, options={min: 4, max: 120, step: 1}) %><p/>
+
+      <%= label_tag(:handness_label, t('fill_fencers.form.handness.description')) %><br>
+      <%= radio_button_tag(:handness2, "Right") %> <%= t('fill_fencers.form.handness.right') %><p/>
+      <%= radio_button_tag(:handness2, "Left") %> <%= t('fill_fencers.form.handness.left') %><p/>
+
+      <%= label_tag(:weapon_label, t('fill_fencers.form.weapon.description')) %><br>
+      <%= radio_button_tag(:weapon2, "Epee") %> <%= t('fill_fencers.form.weapon.epee') %><p/>
+      <%= radio_button_tag(:weapon2, "Sabre") %> <%= t('fill_fencers.form.weapon.sabre') %><p/>
+      <%= radio_button_tag(:weapon2, "Foil") %> <%= t('fill_fencers.form.weapon.foil') %><p/>
+
     </div>
   </div>
   <div class="col-xs-5">
   </div>
   <div class="col-xs-5">
+    <%= label_tag(:tableu_label, t('fill_fencers.form.tableu')) %><br>
+    <%= number_field_tag(:tableu, options={min: 2, max: 1024, step: 2}) %><p/>
+
     <%= submit_tag(t('fill_fencers.form.submit'), class: 'btn btn-primary float-right') %>
   </div>
 <% end %>

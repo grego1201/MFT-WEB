@@ -11,8 +11,10 @@ AllCops:
     - app/assets/**/*
     - app/**/*.swp
 Metrics/LineLength:
-    Max: 120
+  Max: 120
 Metrics/MethodLength:
-    Max: 15
+  Max: 15
+Metrics/ClassLength:
+  Max: 140
 Documentation:
   Enabled: false

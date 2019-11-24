@@ -5,20 +5,28 @@
       "agressiveness": false,
       "short_distance": false,
       "blade": false,
-      "second_intention": false
+      "second_intention": false,
+      "risk": 2
     },
     "fencer1": {
       "intimidated": false,
       "age": 18,
       "height": 160,
-      "grip": 1
+      "grip": 1,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
     },
     "fencer2": {
       "intimidated": false,
       "age": 30,
       "height": 170,
-      "grip": 1
-    }
+      "grip": 1,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
+    },
+    "tableu": 16
   },
   "tc2": {
     "description": "Agressive, take blade and short distance",
@@ -26,20 +34,28 @@
       "agressiveness": true,
       "short_distance": true,
       "blade": true,
-      "second_intention": false
+      "second_intention": false,
+      "risk": 3
     },
     "fencer1": {
       "intimidated": false,
       "age": 20,
       "height": 160,
-      "grip": 0
+      "grip": 0,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
     },
     "fencer2": {
       "intimidated": true,
       "age": 14,
       "height": 170,
-      "grip": 1
-    }
+      "grip": 1,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
+    },
+    "tableu": 16
   },
   "tc3": {
     "description": "Agressive, not blade and not short distance, second intention",
@@ -47,19 +63,56 @@
       "agressiveness": true,
       "short_distance": false,
       "blade": false,
-      "second_intention": true
+      "second_intention": true,
+      "risk": 3
     },
     "fencer1": {
       "intimidated": false,
       "age": 20,
       "height": 160,
-      "grip": 1
+      "grip": 1,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
     },
     "fencer2": {
       "intimidated": true,
       "age": 18,
       "height": 160,
-      "grip": 0
-    }
+      "grip": 0,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
+    },
+    "tableu": 16
+  },
+  "tc4": {
+    "description": "Agressive, not blade and not short distance, second intention",
+    "results": {
+      "agressiveness": true,
+      "short_distance": false,
+      "blade": false,
+      "second_intention": true,
+      "risk": 4
+    },
+    "fencer1": {
+      "intimidated": false,
+      "age": 20,
+      "height": 160,
+      "grip": 1,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 1
+    },
+    "fencer2": {
+      "intimidated": true,
+      "age": 18,
+      "height": 160,
+      "grip": 0,
+      "handness": 0,
+      "weapon": 0,
+      "ranking": 9999999
+    },
+    "tableu": 16
   }
 }
