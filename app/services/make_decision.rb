@@ -6,6 +6,7 @@ class MakeDecision
   def initialize(params)
     @fencer1 = initialize_fencer(params[:fencer1])
     @fencer2 = initialize_fencer(params[:fencer2])
+    @tableu = params[:tableu].to_i
   end
 
   def obtain_decision
@@ -19,7 +20,8 @@ class MakeDecision
       agressiveness: agressiveness,
       short_distance: short_distance,
       blade: blade,
-      second_intention: second_intention
+      second_intention: second_intention,
+      risk: risk
     }
   end
 
@@ -30,7 +32,10 @@ class MakeDecision
       age: fencer_options[:age].to_i,
       intimidated: fencer_options[:intimidated].to_i,
       height: fencer_options[:height].to_i,
-      grip: fencer_options[:grip]
+      grip: fencer_options[:grip],
+      ranking: fencer_options[:ranking].to_i,
+      handness: fencer_options[:handness].to_i,
+      weapon: fencer_options[:weapon].to_i
     }
   end
 
@@ -112,5 +117,50 @@ class MakeDecision
     return true if experience.zero?
 
     false
+  end
+
+  def risk
+    predict = make_predict
+    win_probability = predict.split('[').last.split(' ').first.to_f
+
+    if win_probability > 0.75
+      4
+    elsif win_probability > 0.60
+      3
+    elsif win_probability > 0.50
+      2
+    elsif win_probability > 0.40
+      1
+    else
+      0
+    end
+  end
+
+  def make_predict
+    uri = URI.parse('https://mftapi.herokuapp.com/predict/')
+    request = Net::HTTP::Get.new(uri)
+    request.set_form_data(predict_params)
+
+    req_options = {
+      use_ssl: uri.scheme == 'https'
+    }
+
+    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+      http.request(request)
+    end
+
+    response.body
+  end
+
+  def predict_params
+    {}.tap do |request_params|
+      2.times do |index|
+        %w[age handness ranking weapon].each do |char|
+          params_char = "fencer#{index + 1}_#{char}"
+          request_params.merge!(params_char => instance_variable_get("@fencer#{index + 1}")[char.to_sym])
+        end
+      end
+      request_params[:tableu] = @tableu
+    end
   end
 end

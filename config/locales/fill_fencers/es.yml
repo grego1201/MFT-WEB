@@ -28,3 +28,11 @@ es:
       short_distance: "Acortar distancia: "
       blade: "Hierro: "
       second_intention: "Segunda intención: "
+      risk:
+        description: "Tomar riesgos: "
+        values:
+          0: No arriesgues nada
+          1: Arriesga lo justo
+          2: Arriesga de vez en cuando
+          3: Prueba diferentes cosas
+          4: Puedes arriesgar bastante

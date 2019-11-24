@@ -9,7 +9,6 @@ class FillFencerController < ApplicationController
   def index; end
 
   def obtain_decision
-    make_request
     results = MakeDecision.new(prepare_decision_params).obtain_decision
     @results = results
 
@@ -17,8 +16,9 @@ class FillFencerController < ApplicationController
     @agressiveness = results[:agressiveness]
     @blade = results[:blade]
     @second_intention = results[:second_intention]
+    @risk = results[:risk]
 
-    redirect_path = '/guided/results' + '?locale=' + take_referrer_locale
+    redirect_path = '/fill_fencer/results' + '?locale=' + take_referrer_locale
     redirect_to redirect_path
   end
 
@@ -46,35 +46,5 @@ class FillFencerController < ApplicationController
   def take_referrer_locale
     parsed_locale = request.referrer.split('/').fourth
     I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : I18n.default_locale.to_s
-  end
-
-  def make_request
-    uri = URI.parse('https://mftapi.herokuapp.com/predict/')
-    request = Net::HTTP::Get.new(uri)
-    request.set_form_data(test_method)
-
-    req_options = {
-      use_ssl: uri.scheme == 'https'
-    }
-
-    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-      http.request(request)
-    end
-
-    response.code
-  end
-
-  def test_method
-    {
-      'fencer1_age' => '26',
-      'fencer1_handness' => '0',
-      'fencer1_ranking' => '33',
-      'fencer1_weapon' => '1.0',
-      'fencer2_age' => '44',
-      'fencer2_handness' => '0',
-      'fencer2_ranking' => '99999999',
-      'fencer2_weapon' => '1.0',
-      'tableu' => '16'
-    }
   end
 end

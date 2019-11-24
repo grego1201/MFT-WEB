@@ -28,3 +28,11 @@ en:
       short_distance: "Short distance: "
       blade: "Blade: "
       second_intention: "Second intention: "
+      risk:
+        description: "Get risks: "
+        values:
+          0: Don't risk anything
+          1: Risk the fair
+          2: Risk from time to time
+          3: Try different things
+          4: You can risk a lot
