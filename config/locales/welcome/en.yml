@@ -1,27 +1,38 @@
 en:
   welcome:
-    introduction: >
-      This page is intended to help those fencers who are starting and have no one to consult
-      in the middle of an assault. When someone gets into this sport and decides to compete
-      with some basic knowledge of the tactical scheme to follow, which costs years of experience
-      to achieve, it is very difficult to decide which actions to carry out. These decisions are
-      more difficult to take in the assault since you have the adrenaline of the moment,
-      which although you have many years of experience, will not allow you to think with a
-      cold mind. Thanks to this tool we can have support to make decisions in a more appropriate
-      way. This will give us options that perhaps we did not take into account, giving us a
-      reasoning why we should consider them for our tactics in the assault. It will also provide
-      us with those ideas which it does not consider opportune, as before, giving us the
-      theoretical motives of why it is not a good idea to carry out such actions.
+    introduction1: >
+      This page is intended to help those fencers who are starting
+      and they have no one to consult in the middle of an assault.
+
+    introduction2: >
+      When someone gets into this sport and decides to compete with some knowledge
+      Basic tactical scheme to follow, it takes years of experience to get and a lot
+      Decide what actions to carry out. These decisions are more difficult to make in
+      the assault since you have the adrenaline of the moment, and although you have been many years
+      of experience, it does not allow you to think with a cold mind.
+
+    introduction3: >
+      Thanks to this tool we can have support to make the decisions of
+      A more appropriate way. We give ourselves options that we may not consider, giving us
+      a reasoning why we should consider them for our tactics in the assault.
+      It will also provide us with ideas that you do not consider appropriate, as before,
+      giving us the theoretical reasons why it is not a good idea to carry out different actions.
+
     using_moments: >
-      This tool does not only serve to help us in the middle of a competition, it will also
-      serve as a reference in training or whenever we have doubts about which situations it
-      is better to do one thing or another.
+      This tool is not only to help us in the middle of a competition, but also
+      It will serve as a reference in training or at any time
+      Let us have doubts about which situations it is better to do one thing or another.
+
     ways_to_use: >
-      For this, this tool has two modes. The first one will be a form to fill in which we will
-      have to introduce the characteristics of the shooters that face. Once we have completed
-      the form correctly, that is, we have filled in all the required fields, we can see the
-      results of the system. On the other hand we will have the guided version of the system,
-      which is more thought to use it "in action". In this case, the tool will ask us a series
-      of questions which will be easier to answer since most of them will be yes, no or I do not
-      know. Once we have finished the battery of questions as in the previous model we will get
-      the result of the system.
+      This tool has two modes.
+
+    way_1: >
+      1. A form to fill out, where we must introduce the characteristics of the
+      shooters that face. Once we have filled out the form correctly,
+      We can see the results of the system.
+
+    way_2: >
+      2. Guided version of the system, designed to be used "in action". In this case the
+      tool will ask us a series of questions, most will be yes, no or
+      I do not know. Once we have finished the battery of questions as in the model
+      Previous we will get the result of the system.

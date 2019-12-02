@@ -1,21 +1,35 @@
 es:
   welcome:
-    introduction: >
-      Esta página está destinada a ayudar a aquellos esgrimistas que están empezando y no tienen a quien consultar en mitad de un asalto.
-      Cuando alguien se mete en este deporte y decide competir con unos conocimientos básicos del esquema táctico a seguir, el cuál cuesta
-      años de experiencia conseguir, cuesta mucho decidir que acciones llevar a cabo. Estas decisiones son más difíciles de tomar en el asalto
-      puesto que tienes la adrenalina del momento, la cual aunque lleves muchos años de experiencia, no te permitirá pensar con mente fría.
-      Gracias a esta herramienta podremos tener un apoyo para tomar las decisiones de una manera mas adecuada. Esta nos dará opciones que quizás
-      no tuvimos en cuenta, dandonos un razonamiento de porque debemos considerarlas para nuestra táctica en el asalto. También nos proporcionará
-      aquellas ideas las cuales no considera oportunas, al igual que antes, dandonos los motívos teóricos del porqué no es buena idea llevar
-      a cabo dichas acciones.
+    introduction1: >
+      Esta página está destinada a ayudar a aquellos esgrimistas que están empezando
+      y no tienen a quien consultar en mitad de un asalto.
+
+    introduction2: >
+      Cuando alguien se mete en este deporte y decide competir con unos conocimientos
+      básicos del esquema táctico a seguir, cuesta años de experiencia conseguir y mucho
+      decidir que acciones llevar a cabo. Estas decisiones son más difíciles de tomar en
+      el asalto puesto que tienes la adrenalina del momento, y aunque lleves muchos años
+      de experiencia, no te permitirá pensar con mente fría.
+
+    introduction3: >
+      Gracias a esta herramienta podremos tener un apoyo para tomar las decisiones de
+      una manera mas adecuada. Nos dará opciones que quizás no tuvimos en cuenta, dándonos
+      un razonamiento de porque debemos considerarlas para nuestra táctica en el asalto.
+      Además nos proporcionará aquellas ideas que no considera oportunas, al igual que antes,
+      dándonos los motívos teóricos del porqué no es buena idea llevar a cabo dichas acciones.
+
     using_moments: >
-      Esta herramienta no sirve solo para ayudarnos en mitad de una competición, también nos servirá como una referencia en los entrenamientos o
-      en cualquier momento que tengamos dudas sobre que en que situaciones es mejor hacer una cosa u otra.
+      Esta herramienta no sirve solo para ayudarnos en mitad de una competición, también
+      nos servirá como una referencia en los entrenamientos o en cualquier momento que
+      tengamos dudas sobre en que situaciones es mejor hacer una cosa u otra.
     ways_to_use: >
-      Para ello esta herramienta dispone de dos modos. El primero de ellos será un formulario a rellenar en el cual tendremos que introducir las
-      características de los tiradores que se enfrentan. Una vez que hayamos cumplimentado el formulario correctamente, es decir hayamos rellenado
-      todos los campos obligatorios, podremos ver los resultados del sistema. Por otro lado tendremos la versión guiada del sistema, la cual está
-      mas pensada para usarlo "en acción". En este caso la herramienta nos irá haciendo una serie de preguntas las cuales serán mas fáciles de responder
-      puesto que la mayoría serán de si, no o no lo sé. Una vez hayamos terminado la batería de preguntas al igual que en el modelo anterior obtendremos
-      el resultado del sistema.
+      Esta herramienta dispone de dos modos.
+    way_1: >
+      1. Un formulario a rellenar, donde debemos introducir las características de los
+      tiradores que se enfrentan. Una vez que hayamos cumplimentado el formulario correctamente,
+      podremos ver los resultados del sistema.
+    way_2: >
+      2. Versión guiada del sistema,  pensada para usarlo "en acción". En este caso la
+      herramienta nos irá haciendo una serie de preguntas, la mayoría serán de si, no o
+      no lo sé. Una vez hayamos terminado la batería de preguntas al igual que en el modelo
+      anterior obtendremos el resultado del sistema.
