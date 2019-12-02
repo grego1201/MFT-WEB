@@ -9,7 +9,7 @@
       <%= rb_yne(:distance) %>
       <%= rb_yne(:age) %>
       <%= label_tag(:intimidated,  t('guided.form.intimidated.description')) %><br>
-      <%= check_box_tag(:intimidated, value = 1) %> <%= t('fill_fencers.form.intimidated.label') %><p/>
+      <%= check_box_tag(:intimidated, value = 1, required: true) %> <%= t('fill_fencers.form.intimidated.label') %><p/>
 
       <%= submit_tag(t('fill_fencers.form.submit'), class: 'btn btn-primary') %>
     </div>

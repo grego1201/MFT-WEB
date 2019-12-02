@@ -14,7 +14,7 @@ module ViewsHelper
     tags << label_tag(:form_label, I18n.t("guided.form.#{form_label}"))
     tags << '<br/>'.html_safe
     answers.each do |answer|
-      tags << radio_button_tag(form_label, answer.to_s)
+      tags << radio_button_tag(form_label, answer.to_s, required: true)
       tags << I18n.t("guided.form.answers.#{answer}")
       tags << '<p/>'.html_safe
     end
