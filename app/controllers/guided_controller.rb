@@ -15,20 +15,29 @@ class GuidedController < ApplicationController
   def obtain_decision
     results = MakeGuidedDecision.new(prepare_decision_params).obtain_decision
 
-    @short_distance = results[:short_distance]
-    @agressiveness = results[:agressiveness]
-    @blade = results[:blade]
-    @second_intention = results[:second_intention]
+    results_to_var(results)
 
     redirect_path = '/guided/results' + '?locale=' + take_referrer_locale
-    redirect_path += "&short_distance=#{@short_distance}"
-    redirect_path += "&agressiveness=#{@agressiveness}"
-    redirect_path += "&blade=#{@blade}"
-    redirect_path += "&second_intention=#{@second_intention}"
+    redirect_path = add_params_to_path(redirect_path)
     redirect_to redirect_path
   end
 
   private
+
+  def results_to_var(results)
+    @short_distance = results[:short_distance]
+    @agressiveness = results[:agressiveness]
+    @blade = results[:blade]
+    @second_intention = results[:second_intention]
+  end
+
+  def add_params_to_path(redirect_path)
+    redirect_path += "&short_distance=#{@short_distance}"
+    redirect_path += "&agressiveness=#{@agressiveness}"
+    redirect_path += "&blade=#{@blade}"
+    redirect_path += "&second_intention=#{@second_intention}"
+    redirect_path
+  end
 
   def prepare_decision_params
     prepared_params = params.permit(:age, :distance, :intimidated)
