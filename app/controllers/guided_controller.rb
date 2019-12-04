@@ -5,9 +5,15 @@ class GuidedController < ApplicationController
 
   def index; end
 
+  def results
+    @short_distance = ActiveRecord::Type::Boolean.new.cast(params[:short_distance])
+    @agressiveness = ActiveRecord::Type::Boolean.new.cast(params[:agressiveness])
+    @blade = ActiveRecord::Type::Boolean.new.cast(params[:blade])
+    @second_intention = ActiveRecord::Type::Boolean.new.cast(params[:second_intention])
+  end
+
   def obtain_decision
     results = MakeGuidedDecision.new(prepare_decision_params).obtain_decision
-    @results = results
 
     @short_distance = results[:short_distance]
     @agressiveness = results[:agressiveness]
@@ -15,6 +21,10 @@ class GuidedController < ApplicationController
     @second_intention = results[:second_intention]
 
     redirect_path = '/guided/results' + '?locale=' + take_referrer_locale
+    redirect_path += "&short_distance=#{@short_distance}"
+    redirect_path += "&agressiveness=#{@agressiveness}"
+    redirect_path += "&blade=#{@blade}"
+    redirect_path += "&second_intention=#{@second_intention}"
     redirect_to redirect_path
   end
 

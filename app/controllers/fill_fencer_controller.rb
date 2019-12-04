@@ -10,7 +10,6 @@ class FillFencerController < ApplicationController
 
   def obtain_decision
     results = MakeDecision.new(prepare_decision_params).obtain_decision
-    @results = results
 
     @short_distance = results[:short_distance]
     @agressiveness = results[:agressiveness]
