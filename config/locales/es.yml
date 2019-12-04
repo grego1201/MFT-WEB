@@ -1,5 +1,5 @@
 es:
   hello: "Hello world"
   fencer: "Tirador %{number}"
-  yes: "Si"
-  no: "No"
+  yes_label: "Si"
+  no_label: "No"
