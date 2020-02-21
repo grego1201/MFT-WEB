@@ -9,5 +9,6 @@ en:
         here %{cva_blog_link}.
         <br>
         <br>
-        You can contact me through me mail %{personal_mail} or through my social networks %{instagram}
-        or %{facebook_link}.
+        You can contact me through my
+        mail %{personal_mail} or through my social networks %{instagram_link}
+        or in %{facebook_link}.
